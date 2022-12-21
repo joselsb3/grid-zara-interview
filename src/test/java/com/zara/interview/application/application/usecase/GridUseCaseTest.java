@@ -8,8 +8,6 @@ import com.zara.interview.application.domain.aggregate.SizeMother;
 import com.zara.interview.application.domain.repository.ProductRepository;
 import com.zara.interview.application.domain.repository.SizeRepository;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -20,8 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
-@ExtendWith(MockitoExtension.class)
-class GridUseCaseShould {
+public class GridUseCaseTest {
 
     @Autowired
     private GridUseCase gridUseCase;
@@ -56,7 +53,7 @@ class GridUseCaseShould {
         //when
         GridProductStockResponse productGrid = gridUseCase.getProductGrid();
 
-        //hen
+        //then
         assertTrue(productGrid.getProductIds().isEmpty());
     }
 
