@@ -18,7 +18,7 @@ public class ZaraInterviewApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		productVisibilityController.getProducts();
+		System.out.println(productVisibilityController.show());
 	}
 
 	public static void main(String[] args) {
